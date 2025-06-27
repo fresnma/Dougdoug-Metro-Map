@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Smaller Starting Image with Zoom and Scrolling</title>
   <style>
     html, body {
-      height: 100%; /* Keep height for initial centering if desired */
+      height: 100%;
       margin: 0;
-      overflow: auto; /* Allow scrolling on the body */
+      overflow: auto; /* Allows scrolling when content exceeds viewport */
     }
 
     body {
       display: flex;
-      justify-content: center;   /* centers horizontally */
-      align-items: center;       /* centers vertically */
-      background-color: #f5f5f5; /* optional background */
-      /* Remove fixed height from body if you want it to truly expand with content */
+      justify-content: center;
+      align-items: center;
+      background-color: #f5f5f5;
     }
 
     img {
-      /* Remove max-width and max-height to allow it to grow larger than viewport */
-      /* You might still want width/height auto to maintain aspect ratio */
-      height: auto;
-      width: auto;
-      /* If you want an initial size, you could set a specific width/height here
-         but still allow it to be larger than the viewport */
+      /* Adjust these values to make the image start even smaller */
+      max-width: 25%; /* Now 25% of the viewport width */
+      max-height: 25%; /* Now 25% of the viewport height */
+      height: auto;   /* Maintains aspect ratio */
+      width: auto;    /* Maintains aspect ratio */
     }
   </style>
 </head>
